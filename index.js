@@ -1,12 +1,16 @@
 // Set up express
 const express = require("express");
 const app = express();
-const port = 8000; 
+const port = 8000;
+
+//load routes from main.js
+const mainRoutes = require("./routes/main");
+app.use("/", mainRoutes);
 
 // Handle the routes
 
 //Homepage: This page will just display the phrase "Hello World!"
-app.get("/home", (req, res) => res.send("Hello World!"));
+app.get("/home", (req, res) => res.send("Welcome to my homepage!"));
 
 //About page: This page will briefly talk about myself, what I study and where.
 app.get('/about', (req, res) => res.send ('<h1>About page</h1>' + '<p> My name is Lubna Maleque and I am a student at Goldsmiths, University of London, studying BSc Creative computing. </p>' ))

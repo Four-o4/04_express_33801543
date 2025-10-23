@@ -16,6 +16,12 @@ router.get('/contact', (req, res) => res.send ('<h1>CONTACT ME</h1>' + '<p1>Prim
 //Date: This page will display the current date and time in your timezone. Using  HTML and javascript's Date object.
 router.get('/date', (req, res) => res.send ('<h1>TODAYS DATE:</h1>' + new Date().toDateString() + '<h2>CURRENT TIME:</h2>' + new Date().toLocaleTimeString() + '<h3> TIMEZONE:</h3>' + Intl.DateTimeFormat().resolvedOptions().timeZone ))
 
+//welcome page
+router.get('/users/:userId/books/:bookId', (req, res) => {
+  res.send(req.params)
+})
+
+
 
 // Export the router object so index.js can access it
 module.exports = router;
