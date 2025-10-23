@@ -2,7 +2,7 @@ This is the readme page.
 
 Codes used: C++, HTML, Javascript
 
-Links to each route:
+Local links to each route:
 http://localhost:8000/home
 http://localhost:8000/about
 http://localhost:8000/contact
