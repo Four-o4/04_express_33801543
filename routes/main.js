@@ -16,11 +16,11 @@ router.get('/contact', (req, res) => res.send ('<h1>CONTACT ME</h1>' + '<p1>Prim
 //Date: This page will display the current date and time in your timezone. Using  HTML and javascript's Date object.
 router.get('/date', (req, res) => res.send ('<h1>TODAYS DATE:</h1>' + new Date().toDateString() + '<h2>CURRENT TIME:</h2>' + new Date().toLocaleTimeString() + '<h3> TIMEZONE:</h3>' + Intl.DateTimeFormat().resolvedOptions().timeZone ))
 
-//welcome page
-router.get('/users/:userId/books/:bookId', (req, res) => {
-  res.send(req.params)
-})
-
+// //Welcome page - Extention task: To creat a welcome page that will show the users name on screen (TBC - still trying to figure it out)
+// Route path: /welcome/:userId
+// Request URL: http://localhost:8000/welcome/user
+// req.params: { "welcome": "userIs" }
+// router.get('/welcome/:userId', (req, res) => {res.send('Welcome:' + req.welcome.userId + '!')})
 
 
 // Export the router object so index.js can access it

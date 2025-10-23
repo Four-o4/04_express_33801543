@@ -12,6 +12,9 @@ app.use("/", mainRoutes);
 //Homepage: This page will just display the phrase "Hello World!"
 app.get("/home", (req, res) => res.send("Welcome to my homepage!"));
 
+// //Welcome page - Extention task: To creat a welcome page that will show the users name on screen (TBC - still trying to figure it out)
+// app.get('/welcome/:userId', (req, res) => {res.send('Welcome:' + req.welcome.userId + '!')})
+
 //About page: This page will briefly talk about myself, what I study and where.
 app.get('/about', (req, res) => res.send ('<h1>About page</h1>' + '<p> My name is Lubna Maleque and I am a student at Goldsmiths, University of London, studying BSc Creative computing. </p>' ))
 
